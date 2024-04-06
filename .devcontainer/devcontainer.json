@@ -1,0 +1,10 @@
+{
+    "name": "Android Development",
+    "dockerFile": "Dockerfile",
+    "appPort": ["8080"],
+    "extensions": ["ms-vscode.cpptools", "ms-vscode.cmake-tools"],
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "postCreateCommand": "echo 'Development container is ready!'"
+}
