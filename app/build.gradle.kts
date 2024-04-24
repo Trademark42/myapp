@@ -1,3 +1,7 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
 plugins {
     id("app.cash.paparazzi")
     id("com.android.application")
@@ -12,7 +16,7 @@ android {
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "template.app.id"
+        applicationId = "com.pokerhand.myapp"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.compileSdk.get().toInt()
         versionCode = 1
@@ -58,6 +62,16 @@ android {
 }
 
 dependencies {
+    implementation 'org.tensorflow:tensorflow-lite:0.0.0-nightly'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
     ksp(libs.androidx.room.compiler)
     ksp(libs.hilt.compiler)
     ksp(libs.square.moshi.kotlin.codegen)
